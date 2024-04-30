@@ -6,22 +6,32 @@
 
 "use strict"
 
-
 function enterClicked() {
+
   // input
-  let age = parseInt(document.getElementById('age').value)
-  // output
-  if (age >= 17) {
-    document.getElementById("user-info").innerHTML =
-      "You can see an R movie alone."
-  } else if (age >= 13) {
-    document.getElementById("user-info").innerHTML =
-      "You can see a PG-13 movie alone."
-  } else if (age >= 5) {
-    document.getElementById("user-info").innerHTML =
-      "You can see a G or PG movie alone."
+
+  let ak12Checked = document.getElementById('AK12-check').checked
+  let ak47Checked = document.getElementById('AK47-check').checked
+  let ak74Checked = document.getElementById('AK74-check').checked
+  let cost = 0
+  let amountOfRounds = parseFloat(document.getElementById('rounds').value)
+
+  // process
+
+  if (ak12Checked == true) {
+    cost = 1.13 * (500 + amountOfRounds * 0.50)
+  } else if (ak47Checked == true) {
+    cost = 1.13 * (1000 + amountOfRounds * 0.50)
+  } else if (ak74Checked == true) {
+    cost = 1.13 * (2000 + amountOfRounds * 0.50)
   } else {
-    document.getElementById("user-info").innerHTML =
-      "You can see nothing."
+    cost = 1.13 * (amountOfRounds * 0.50)
   }
+
+  let costRounded = cost.toFixed(2)
+
+  // output
+
+  document.getElementById("user-info").innerHTML =
+    "Cost after deductions = $" + costRounded
 }

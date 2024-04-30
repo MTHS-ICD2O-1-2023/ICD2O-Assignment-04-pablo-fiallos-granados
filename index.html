@@ -28,23 +28,33 @@
         <div class="right-image">
           <img src="./images/1200x800.jpg" alt="guns" width="250" />
         </div>
-        <div class="page-content">Please enter the following: </div>
+        <div class="page-content">Please enter the following:</div>
         <br />
         <div id="radio-buttons">
-          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="on-check">
+          <p>Type of gun</p>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="AK12-check">
             <input checked class="mdl-radio__button" id="AK12-check" name="gun" type="radio" value="on">
             <span class="mdl-radio__label">AK-12</span>
           </label>
-          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="off-check">
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="AK47-check">
             <input class="mdl-radio__button" id="AK47-check" name="gun" type="radio" value="off">
             <span class="mdl-radio__label">AK-47</span>
           </label>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="AK74-check">
+            <input class="mdl-radio__button" id="AK74-check" name="gun" type="radio" value="off">
+            <span class="mdl-radio__label">AK-74</span>
+          </label>
+          <label class="mdl-radio mdl-js-radio mdl-js-ripple-effect" for="none-check">
+            <input class="mdl-radio__button" id="none-check" name="gun" type="radio" value="off">
+            <span class="mdl-radio__label">None</span>
+          </label>
         </div>
+        <br/>
         <form action="#">
-          <p>Age</p>
+          <p>Amount of rounds</p>
           <div class="mdl-textfield mdl-js-textfield">
-            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="age">
-            <label class="mdl-textfield__label" for="age-entered">enter...</label>
+            <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="rounds">
+            <label class="mdl-textfield__label" for="rounds-entered">enter...</label>
             <span class="mdl-textfield__error">Input is not a number!</span>
           </div>
           <br />
