@@ -14,7 +14,7 @@ function enterClicked() {
   let ak47Checked = document.getElementById('AK47-check').checked
   let ak74Checked = document.getElementById('AK74-check').checked
   let cost = 0
-  let amountOfRounds = parseFloat(document.getElementById('rounds').value)
+  let amountOfRounds = parseInt(document.getElementById('rounds').value)
 
   // process
 
